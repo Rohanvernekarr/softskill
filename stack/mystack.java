@@ -1,4 +1,3 @@
-
 public class mystack{
     node top;
     int size;

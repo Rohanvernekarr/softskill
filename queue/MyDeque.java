@@ -8,7 +8,7 @@ class NodeD{
         this.prev = null;
     }
 }
-
+ 
  class MyDeque{
     NodeD head;
     NodeD rear;
