@@ -1,18 +1,23 @@
 package trees;
 
-class TNode{
+class TNode
+{
     int data;
     TNode left, right;
-    TNode(int d){   
+    TNode(int d)
+    {   
         data = d;
-        
+
     }
 }
 
-public class Binarytree {
+public class Binarytree 
+{
     
-    TNode buildTree(int arr[], int i){
-        if(i >= arr.length){
+    TNode buildTree(int arr[], int i)
+    {
+        if(i >= arr.length)
+        {
             return null;
         }
         TNode root = new TNode(arr[i]);
@@ -23,7 +28,8 @@ public class Binarytree {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         MyBinarytree m = new MyBinarytree();
         int arr[] = {10, 20, 30, 40, 50};
         m.buildTree(arr, 0);
