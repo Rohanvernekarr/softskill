@@ -1,5 +1,5 @@
 public class MyBinaryTree {
-    Static class Node{
+    static class Node{
         Node left , right;
         int data;
         Node(int data){
@@ -10,9 +10,13 @@ public class MyBinaryTree {
     }
 
     public static void main(String[] args) {
-        int arr[]= {1,2,3,4,5,6,7};
+        int arr[]= {10,20,30,40,50,60,70};
         Node root = buildTree(arr, 0);
         inorder(root);
+        
+        System.out.println();
+        preorder(root);
+        System.out.println();
     }
 
     static void inorder(Node root){
@@ -22,6 +26,14 @@ public class MyBinaryTree {
         inorder(root.left);
         System.out.print(root.data + " ");
         inorder(root.right);
+    }
+    static void preorder(Node root){
+        if(root == null){
+            return;
+          } 
+        System.out.print(root.data + " ");
+        preorder(root.left);
+        preorder(root.right);
     }
 
     static Node buildTree(int arr[], int i){
@@ -33,4 +45,5 @@ public class MyBinaryTree {
         root.right = buildTree(arr, 2*i + 2);
         return root;
     
+}
 }
